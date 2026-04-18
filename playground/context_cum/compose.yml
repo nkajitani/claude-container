@@ -1,0 +1,7 @@
+services:
+  python:
+    build: .
+    volumes:
+      - .:/work
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
