@@ -1,0 +1,9 @@
+services:
+  claude:
+    build: .
+    container_name: claude
+    volumes:
+      - ~/docker/terraform:/app
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    
