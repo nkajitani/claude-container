@@ -1,1 +1,25 @@
+# 認証情報
 .env
+.credentials.json
+
+# 会話・操作履歴
+history.jsonl
+file_history
+
+# セッション・ローカル状態
+sessions/
+session-env/
+shell-snapshots/
+backups/
+cache/
+plans/
+file-history/
+
+# プロジェクト固有データ（メモリ含む）
+projects/
+
+# プラグイン\\
+plugins/
+
+# MCP キャッシュ
+mcp-needs-auth-cache.json
