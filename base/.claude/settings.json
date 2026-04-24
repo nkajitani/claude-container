@@ -1,5 +1,4 @@
 {
-  "dangerouslyDisableSandbox": true,
   "permissions": {
     "deny": [
       "Read(./.env)"
@@ -12,5 +11,6 @@
   "language": "japanese",
   "minimumVersion": "stable",
   "theme": "dark",
+  "dangerouslyDisableSandbox": true,
   "defaultMode": "acceptEdits"
 }
