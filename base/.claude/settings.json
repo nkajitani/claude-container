@@ -1,0 +1,16 @@
+{
+  "dangerouslyDisableSandbox": true,
+  "permissions": {
+    "deny": [
+      "Read(./.env)"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "sh /root/.claude/statusline-command.sh"
+  },
+  "language": "japanese",
+  "minimumVersion": "stable",
+  "theme": "dark",
+  "defaultMode": "acceptEdits"
+}
