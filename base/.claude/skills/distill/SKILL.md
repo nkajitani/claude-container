@@ -1,4 +1,5 @@
 ---
+name: distill
 description: プロジェクト固有の知識を /app/.claude/ に書き出す。グローバル設定（/root/.claude/）の構成を継承しつつ、プロジェクト固有の差分のみを {cwd}/.claude/ に生成する。
 ---
 
