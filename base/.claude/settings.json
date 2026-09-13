@@ -8,8 +8,18 @@
     "type": "command",
     "command": "sh /root/.claude/statusline-command.sh"
   },
+  "extraKnownMarketplaces": {
+    "claude-code-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code"
+      }
+    }
+  },
   "language": "japanese",
+  "alwaysThinkingEnabled": false,
   "minimumVersion": "stable",
+  "tui": "fullscreen",
   "theme": "dark",
   "dangerouslyDisableSandbox": true,
   "defaultMode": "acceptEdits"
