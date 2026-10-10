@@ -15,6 +15,10 @@ cache/
 plans/
 file-history/
 paste-cache/
+logs/
+.last-cleanup
+policy-limits.json
+remote-settings.json
 
 # プロジェクト固有データ（メモリ含む）
 projects/

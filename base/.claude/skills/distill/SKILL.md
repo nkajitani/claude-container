@@ -1,6 +1,6 @@
 ---
 name: distill
-description: プロジェクト固有の知識を /app/.claude/ に書き出す。グローバル設定（/root/.claude/）の構成を継承しつつ、プロジェクト固有の差分のみを {cwd}/.claude/ に生成する。
+description: プロジェクト固有の知識を {cwd}/.claude/ に書き出す。グローバル設定（/root/.claude/）の構成を継承しつつ、プロジェクト固有の差分のみを {cwd}/.claude/ に生成する。
 ---
 
 以下の手順でプロジェクト固有の `.claude/` を初期化・更新してください。
@@ -46,8 +46,17 @@ description: プロジェクト固有の知識を /app/.claude/ に書き出す�
 
 ## Step 4: {cwd}/.claude/memory/ を生成・更新
 
-`/root/.claude/projects/-app/memory/` の構成に倣い、プロジェクト固有のメモリを書き出す。
+グローバルメモリの構成（`MEMORY.md` に 1 行 1 件の索引、本体は 1 ファイル 1 事実、
+frontmatter に `name` / `description` / `type`）に倣い、プロジェクト固有のメモリを書き出す。
 既存ファイルがある場合は上書きではなく差分を追記する。
+
+グローバルメモリの実体は `/root/.claude/projects/<cwd をスラッシュ置換した名前>/memory/` にある。
+`WORKDIR` が変わるとこのディレクトリ名も変わるため、パスを決め打ちしないこと。
+現在のパスは次のコマンドで求める。
+
+```console
+$ echo "/root/.claude/projects/$(pwd | sed 's|/|-|g')/memory/"
+```
 
 ## 完了後
 

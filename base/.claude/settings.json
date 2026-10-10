@@ -2,6 +2,9 @@
   "permissions": {
     "deny": [
       "Read(./.env)"
+    ],
+    "additionalDirectories": [
+      "/root/.claude/logs"
     ]
   },
   "statusLine": {
@@ -22,5 +25,31 @@
   "tui": "fullscreen",
   "theme": "dark",
   "dangerouslyDisableSandbox": true,
-  "defaultMode": "acceptEdits"
+  "defaultMode": "acceptEdits",
+  "hooks": {
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/root/.claude/hooks/log-agent.sh",
+            "timeout": 10,
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/root/.claude/hooks/log-agent.sh",
+            "timeout": 10,
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ]
+  }
 }
