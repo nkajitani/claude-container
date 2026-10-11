@@ -1,0 +1,43 @@
+# ビルドコンテキストから除外するもの。
+# .gitignore は Docker ビルドに効かないため、同等の除外をここに定義する。
+# base/.claude/ はイメージの /root/.claude/ になるため、
+# 「全プロジェクトに配るもの」以外は入れない。
+
+# 認証情報（レジストリに載せてはいけない）
+.env
+.claude/.credentials.json
+
+# 会話・操作履歴
+.claude/history.jsonl
+.claude/file-history/
+
+# セッション・ローカル状態
+.claude/sessions/
+.claude/session-env/
+.claude/shell-snapshots/
+.claude/backups/
+.claude/cache/
+.claude/plans/
+.claude/paste-cache/
+.claude/todos/
+.claude/statsig/
+.claude/telemetry/
+.claude/.last-cleanup
+.claude/policy-limits.json
+.claude/remote-settings.json
+
+# サブエージェントの実行ログ（開発時に生成されるもの）
+.claude/logs/
+
+# プロジェクト固有データ（メモリ・会話履歴）
+.claude/projects/
+
+# プラグイン
+.claude/plugins/
+
+# MCP キャッシュ
+.claude/mcp-needs-auth-cache.json
+
+# Git
+.git/
+.gitignore
